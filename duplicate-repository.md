@@ -18,14 +18,14 @@ For this assignment the commands are:
     > Replace `<your_username>` with your actual Github username in the url below.
     
     ```bash
-    cd assignment-data-science
+    cd assignment-software-engineering
     git push --mirror git@github.com:<your_username>/source-assignment-software-engineering.git
     ```
 
  4. Remove the temporary local repository you created in step 1.
     ```bash
     cd ..
-    rm -rf assignment-data-science
+    rm -rf assignment-software-engineering
     ```
     
  5. You can now clone your `source-assignment-software-engineering` repository on your machine (in my case in the `code` folder).
