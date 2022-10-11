@@ -34,3 +34,13 @@ For this assignment the commands are:
     ```
 
  6. Add the reviewers as collaborators to your new repository: DonDebonair, clickery-buttony, PruijtMeister
+
+However, if you want to go with GitHub WebUI only you can perform the following steps:
+
+ 1. [Import this repository into new one](https://docs.github.com/en/get-started/importing-your-projects-to-github/importing-source-code-to-github/importing-a-repository-with-github-importer). As an old repository use the url to this repository; give it a good name, for example `source-assignment-software-engineering`; choose "Private" under "Privacy".
+
+ 2. You can now clone your `source-assignment-software-engineering` repository on your machine.
+    ```bash
+    git clone git@github.com:<your_username>/source-assignment-software-engineering.git
+    ```
+ 3. Add the reviewers as collaborators to your new repository: DonDebonair, clickery-buttony, PruijtMeister
