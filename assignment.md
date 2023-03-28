@@ -91,6 +91,10 @@ The solution will be assessed on the following criteria:
 - Can you describe the biggest short-comings of your solution and which steps could be taken to 
   improve on that?
 
+**NOTE:** your experience as a software engineer influences our expectations on the completeness of 
+your solution - both in terms of requirements and bonus objectives met. In other words: we expect 
+different things from someone with 1 year of experience than from someone with 10 years of experience.
+
 ## Additional information and assumptions
 
 - The required raw data to test your solution can be found through this link: https://drive.google.com/drive/folders/1TV20EVuxcmaqro7e0HfmX2j6HtILNwXB?usp=sharing
