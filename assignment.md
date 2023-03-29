@@ -27,8 +27,8 @@ data.
 
 Your solution should include the following functionality:
 
-1. An API endpoint that a client can use to push _raw_ data as provided from the greenhouse climate computer 
-   (see below for access to data)
+1. An API endpoint that can be used to push raw data (according to the provided format) 
+   from the climate computer to your service (see below for access to data)
 2. One or more API endpoints to expose the meteo data in a _sane_ and _convenient_ 
    format for consumption by the frontend. The frontend expects at least the following 
    functionality:
