@@ -27,7 +27,7 @@ data.
 
 Your solution should include the following functionality:
 
-1. An API endpoint to consume the _raw_ data from the greenhouse climate computer 
+1. An API endpoint to expose the _raw_ data as provided from the greenhouse climate computer 
    (see below for access to data)
 2. One or more API endpoints to expose the meteo data in a _sane_ and _convenient_ 
    format for consumption by the frontend. The frontend expects at least the following 
