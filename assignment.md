@@ -58,6 +58,11 @@ Your solution should include the following functionality:
 ### Non-functional requirements
 
 - Use Python 3.10 or higher _or_ use Golang 1.19 or higher
+
+> [!IMPORTANT]
+> At Source, we're increasingly moving towards Golang as our main language for backend development outside of building 
+> ML models. For that reason, **we consider it a huge plus if you develop your solution in Golang**.
+
 - Maintainability is favoured over performance. No complex performance optimizations should be 
   needed. Another developer should be able to continue where you left off
 - It should be possible to run the project (and all of its components) on any machine, including 
