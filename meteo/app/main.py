@@ -1,14 +1,11 @@
 """
 Main FastAPI application entry point.
 """
-from typing import Dict, Any
-
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from .core.database import create_tables
-from .models import Measurement  # Import models to register them
-from .api.v1 import health_router, measurements_router
+from meteo.app.core.database import create_tables
+from meteo.app.api.v1 import health_router, measurements_router
 
 # Create database tables on startup
 create_tables()
@@ -36,4 +33,4 @@ app.include_router(measurements_router)
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=8001)
