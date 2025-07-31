@@ -3,7 +3,7 @@ SQLAlchemy models for weather measurements.
 """
 from sqlalchemy import Column, Integer, Float, String, DateTime, Enum
 
-from meteo.app.models.enums.hortimax_synopta_enum import HortimaxSynoptaEmun
+from meteo.app.models.enums.hortimax_synopta_enum import HortimaxSynoptaEnum
 from meteo.app.schemas.sensor_data import HortimaxEnumValue
 
 from meteo.app.core.database import Base
@@ -35,7 +35,7 @@ class Measurement(Base):
     wind_speed_m_s = Column(Float, nullable=True)
     wind_speed_unmuted_m_s = Column(Float, nullable=True)
     wind_direction_degrees = Column(Integer, nullable=True)
-    wind_direction_compass = Column(Enum(HortimaxSynoptaEmun), nullable=True)
+    wind_direction_compass = Column(Enum(HortimaxSynoptaEnum), nullable=True)
     
     # Humidity and pressure
     relative_humidity_perc = Column(Float, nullable=True)
@@ -59,8 +59,8 @@ class Measurement(Base):
     precipitation = Column(Float, nullable=True)
     
     # Station status
-    status_meteo_station = Column(Enum(HortimaxSynoptaEmun), nullable=True)
-    status_meteo_station_communication = Column(Enum(HortimaxSynoptaEmun), nullable=True)
+    status_meteo_station = Column(Enum(HortimaxSynoptaEnum), nullable=True)
+    status_meteo_station_communication = Column(Enum(HortimaxSynoptaEnum), nullable=True)
 
     # Metadata
     name = Column(String(100), nullable=False)
@@ -86,8 +86,8 @@ class Measurement(Base):
             if isinstance(value, (str, int, float)):
                 data_dict[variable_name] = value
             
-            # Handle Hortimax Synopta emun values
+            # Handle Hortimax Synopta enum values
             elif isinstance(value, HortimaxEnumValue) and value.type == "hortimax.synopta.enum":
-                data_dict[variable_name] = HortimaxSynoptaEmun(value.key)
+                data_dict[variable_name] = HortimaxSynoptaEnum(value.key)
 
         return cls(**data_dict)

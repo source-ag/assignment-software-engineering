@@ -1,22 +1,28 @@
 from enum import Enum
-from typing import Optional
 
-class HortimaxSynoptaEmun(Enum):
+class HortimaxSynoptaEnum(Enum):
     """Hortimax Synopta enum values"""
 
     # Wind direction compass values
-    W = 8784  
-
-    # Meteorological station status values
-    ACTIEF = 8789
-
+    N   = 8772
+    NNO = 8773
+    NO  = 8774
+    ONO = 8775
+    O   = 8776
+    OZO = 8777
+    ZO  = 8778
+    ZZO = 8779
+    Z   = 8780
+    ZZW = 8781
+    ZW = 8782
+    WZW = 8783
+    W = 8784
+    WNW = 8785
+    NW  = 8786
+    NNW = 8787
+    
+    # Meteorological station status values -> Left expandable for Inactive, offline etc.
+    Actief = 8789
+    
     # Meteorological station communication status values
-    ONLINE = 8796
-        
-    @classmethod
-    def from_key(cls, key: int) -> Optional["HortimaxSynoptaEmun"]:
-        try:
-            return cls(key)
-        except ValueError:
-            print(f"Warning: Invalid HortimaxSynoptaEmun key: {key}")
-            return None
+    Online = 8796
